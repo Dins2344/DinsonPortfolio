@@ -1,8 +1,3 @@
-//icons
-import {} from "react-icons/rx";
-
-//service data
-export const serviceData = [];
 
 //components
 import ServiceSlider from "../../components/ServiceSlider";
