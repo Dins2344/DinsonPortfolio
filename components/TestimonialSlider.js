@@ -30,22 +30,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
 import "swiper/css";
-import "swiper/css/free-mode";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // icons
 import { FaQuoteLeft } from "react-icons/fa";
 //import swiper modules
-import { Pagination } from "swiper";
+import {Navigation, Pagination } from "swiper";
 
 const TestimonialSlider = () => {
   return (
     <Swiper
+      navigation = {true}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      modules={[Navigation,Pagination]}
+      className="h-[400px]"
     >
       {testimonialData.map((person, i) => {
         return (
@@ -53,15 +54,21 @@ const TestimonialSlider = () => {
             <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
               {/* avatar, name, position  */}
               <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
-                <div>
+                <div className="flex flex-col justify-center text-center">
                   {/* avatar */}
-                  <div>avatar</div>
+                  <div className="mb-2 mx-auto">
+                  <Image src={person.image} width={100} height={100} alt=""></Image>
+                  </div>
 
                   {/* name  */}
-                  <div>name</div>
+                  <div className="text-lg">
+                    {person.name}
+                  </div>
 
                   {/* position  */}
-                  <div>position</div>
+                  <div className=" text0[12px] uppercase font-extralight">
+                    {person.position}
+                  </div>
                 </div>
               </div>
               {/* message  */}
