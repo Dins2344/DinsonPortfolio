@@ -17,17 +17,17 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <>
-    <Head>
+      <Head>
         <link rel="icon" href="/favicon-color.webp" />
       </Head>
-    <Layout>
-      <AnimatePresence>
-        <motion.div key={router.route} className="h-full">
-          <Transition />
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </Layout>
+      <Layout>
+        <AnimatePresence>
+          <motion.div key={router.route} className="h-full">
+            <Transition />
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </Layout>
     </>
   );
 }
