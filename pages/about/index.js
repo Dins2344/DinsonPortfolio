@@ -8,6 +8,8 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaAngular,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
@@ -15,6 +17,7 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiMongodb,
 } from "react-icons/si";
 
 //  data
@@ -30,15 +33,15 @@ export const aboutData = [
           <FaJs key={""} />,
           <FaReact key={""} />,
           <SiNextdotjs key={""} />,
-          <SiFramer key={""} />,
-          <FaWordpress key={""} />,
+          <FaAngular key={""} />,
+          <FaNodeJs key={""} />,
+          <SiMongodb key={''} />
         ],
       },
       {
         title: "UI/UX Design",
         icons: [
           <FaFigma key={""} />,
-          <SiAdobexd key={""} />,
           <SiAdobephotoshop key={""} />,
         ],
       },
@@ -49,28 +52,17 @@ export const aboutData = [
     info: [
       {
         title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        stage: "2023",
       },
     ],
   },
   {
     title: "experience",
     info: [
+      
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Web Developer - Brototype",
+        stage: "2022 - 2023",
       },
     ],
   },
@@ -78,17 +70,14 @@ export const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Web Development - Brototype, Kochi, Kerala",
+        stage: "2023",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title: "Automobile Engineering Diploma - SITS, Valliyode, Palakkad",
+        stage: "2018",
       },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
+      
     ],
   },
 ];
@@ -154,7 +143,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={9} />+
+                  <CountUp start={0} end={2} duration={9} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -163,7 +152,7 @@ const About = () => {
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={9} />+
+                  <CountUp start={0} end={10} duration={9} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
@@ -172,7 +161,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={9} />+
+                  <CountUp start={0} end={9} duration={9} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
