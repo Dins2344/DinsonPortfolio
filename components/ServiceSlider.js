@@ -18,31 +18,34 @@ import {
 
 // data
 const serviceData = [
-  {
-    icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+  // {
+  //   icon: <RxCrop />,
+  //   title: "Branding",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  // },
   {
     icon: <RxPencil2 />,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "By using different tools creating web designs that adapt and respond to different screen sizes and devices.",
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Frond-end development",
+    description:
+      "Ensures user-friendly experience across desktops and mobile devices.",
   },
   {
     icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Back-end development",
+    description:
+      "Involves server-side programming to manage and process data.",
   },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+  // {
+  //   icon: <RxRocket />,
+  //   title: "SEO",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  // },
 ];
 
 //import swiper modules

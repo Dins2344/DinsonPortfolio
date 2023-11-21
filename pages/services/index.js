@@ -1,4 +1,3 @@
-
 //components
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
@@ -32,9 +31,10 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets
+              Elevate your online presence with my comprehensive web development
+              services. I specialize in crafting visually stunning and highly
+              functional websites. From clean and responsive front-end designs
+              to robust back-end solutions
             </motion.p>
           </div>
           <motion.div
