@@ -10,7 +10,8 @@ import {
   RiGithubLine,
   RiDribbleLine,
   RiBehanceLine,
-  RiPinterestLine
+  RiPinterestLine,
+  RiMailAddLine
 } from 'react-icons/ri'
 
 const Socials = () => {
@@ -43,6 +44,13 @@ const Socials = () => {
         className="hover:text-accent transition-all duration-300"
       >
         <RiLinkedinLine />
+      </Link>
+      <Link
+        href={"https://mail.google.com/mail/u/0/?ogbl#inbox?compose=GTvVlcRwQZxmBGdwsprwVrkWlWCMTJCDDKGbhDMVGkpbPCtbntFVjRRpshrZxMDshFxhCqMjcTNfr"}
+        target="blank"
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiMailAddLine />
       </Link>
       {/* <Link href={""} className="hover:text-accent transition-all duration-300">
         <RiBehanceLine />
