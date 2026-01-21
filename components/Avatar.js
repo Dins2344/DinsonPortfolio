@@ -5,7 +5,7 @@ const Avatar = () => {
   return (
     <div>
       <Image 
-      src={'/avatar.png'}
+      src={'/avatar2.png'}
         width={737}
         height={678}
         alt="avatarImage"
