@@ -27,7 +27,7 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br />{" "}
+            Transforming <span className="text-accent">Ideas</span> into<br />
             <span className="text-accent">Digital Reality</span>
           </motion.h1>
 
@@ -39,8 +39,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-0 xl:mb-16"
           >
-            The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using Content here
+            From imagination to implementation — scalable, secure, and user-centric digital solutions.
           </motion.p>
           {/* button */}
           <div className="flex justify-center xl:hidden relative">
