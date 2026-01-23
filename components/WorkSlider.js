@@ -4,43 +4,46 @@ const workSlides = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title1: 'EVENT',
+          path: '/pro1.jpg',
+          title2: 'ZONE',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title1: 'CHRISTMAS',
+          title2: 'BOUTIQUE',
+          path: '/pro2.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title1: 'DEEM',
+          title2: '',
+          path: '/pro3.jpg',
         },
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
+        // {
+        //   title: 'title',
+        //   path: '/thumb4.jpg',
+        // },
       ],
     },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-        },
-      ],
-    },
+    // {
+    //   images: [
+    //     {
+    //       title: 'title',
+    //       path: '/thumb4.jpg',
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/thumb1.jpg',
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/thumb2.jpg',
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/thumb3.jpg',
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -92,10 +95,10 @@ const WorkSlider = () => {
                       <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300'>
                         <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                           {/* tittle part 1 */}
-                          <div className='delay-100'>LIVE</div>
+                          <div className='delay-100'>{image.title1}</div>
 
                           {/* tittle part 1 */}
-                          <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>PROJECT</div>
+                          <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>{image.title2}</div>
 
                           {/* icon*/}
                           <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200'>

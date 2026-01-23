@@ -47,22 +47,22 @@ export const aboutData = [
       },
     ],
   },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2023",
-      },
-    ],
-  },
+  // {
+  //   title: "awards",
+  //   info: [
+  //     {
+  //       title: "Webby Awards - Honoree",
+  //       stage: "2023",
+  //     },
+  //   ],
+  // },
   {
     title: "experience",
     info: [
-      
+
       {
-        title: "Web Developer - Brototype",
-        stage: "2022 - 2023",
+        title: "SDE 1- Neutrinos, Bangalore, India",
+        stage: "2023(Dec) - 2025(Dec)",
       },
     ],
   },
@@ -77,7 +77,7 @@ export const aboutData = [
         title: "Automobile Engineering Diploma - SITS, Valliyode, Palakkad",
         stage: "2018",
       },
-      
+
     ],
   },
 ];
@@ -116,8 +116,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Crafting <span className="text-accent">stories</span> Through Stunning Digital Designs.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -126,9 +125,8 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            when an unknown printer took a galley of type and scrambled it to
-            make a type specimen book. It has survived not only five centuries,
-            
+            I transform ideas into engaging digital experiences by blending creativity, technology, and user-focused design to build products that leave a lasting impression.
+
           </motion.p>
 
           {/* counters */}
@@ -150,18 +148,18 @@ const About = () => {
                 </div>
               </div>
               {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={9} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
                 </div>
-              </div>
+              </div> */}
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={9} duration={9} />+
+                  <CountUp start={0} end={5} duration={9} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
@@ -184,10 +182,9 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${
-                    index === itemIndex &&
+                  className={`${index === itemIndex &&
                     "text-accent after:w-full after:bg-red-600 after:transition-all after:duration-300"
-                  } hover:text-accent cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                    } hover:text-accent cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}

@@ -31,9 +31,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s with the
-              release of Letraset sheets
+              A showcase of projects where creativity meets clean code — delivering modern, responsive, and high-performance digital experiences.
             </motion.p>
           </div>
           <motion.div
