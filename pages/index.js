@@ -63,18 +63,19 @@ const Home = () => {
 
       {/* image section */}
 
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+      {/* pointer-events-none so hover repulse still reaches the particles underneath */}
+      <div className="absolute inset-0 pointer-events-none">
         {/* background */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
+        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat absolute inset-0 mix-blend-color-dodge translate-z-0">
         </div>
-        {/* avatar */}
+        {/* avatar: backdrop on the mobile nav bar (80px) below xl, beside the text from xl up */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{duration:1,ease:'easeInOut'}}
-          className="w-full h-full max-w-[700px] max-h-[85vh] absolute bottom-32 lg:bottom-0 lg:right-[7%]"
+          className="absolute inset-x-0 bottom-20 xl:bottom-0 h-[50vh] xl:h-[85vh] flex justify-end xl:pr-[7%]"
         >
           <Avatar />
         </motion.div>
