@@ -177,18 +177,24 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[350px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-2 xl:gap-x-4 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
-                <div
+                <button
+                  type="button"
                   key={itemIndex}
-                  className={`${index === itemIndex &&
-                    "text-accent after:w-full after:bg-red-600 after:transition-all after:duration-300"
-                    } hover:text-accent cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  className={`${index === itemIndex ? "text-accent" : "text-white/70"} relative isolate px-4 py-1.5 rounded-full hover:text-accent capitalize xl:text-lg transition-colors duration-300`}
                   onClick={() => setIndex(itemIndex)}
                 >
+                  {index === itemIndex && (
+                    <motion.span
+                      layoutId="about-tab"
+                      className="glass-sm glass-pill absolute inset-0 -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                    />
+                  )}
                   {item.title}
-                </div>
+                </button>
               );
             })}
           </div>

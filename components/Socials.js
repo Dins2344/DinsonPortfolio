@@ -16,7 +16,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className=" flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-lg glass-sm glass-pill px-5 py-2.5">
       <Link
         href={"https://github.com/Dins2344"}
         target="blank"

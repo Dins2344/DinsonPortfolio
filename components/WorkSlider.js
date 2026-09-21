@@ -81,17 +81,17 @@ const WorkSlider = () => {
                     key={i}
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                   >
-                    <div className="flex items-center justify-center relative overflow-hidden group">
+                    <div className="flex items-center justify-center relative overflow-hidden group rounded-lg">
                       {/* images  */}
                       <Image
                         src={image.path}
                         alt="work image"
                         width={500}
                         height={300}
+                        className="group-hover:scale-105 transition-transform duration-700 ease-out"
                       ></Image>
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       {/* tittle */}
-                      <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300'>
+                      <div className='glass-sm rounded-none border-x-0 border-b-0 absolute inset-x-0 bottom-0 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300'>
                         <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                           {/* tittle part 1 */}
                           <div className='delay-100'>{image.title1}</div>
