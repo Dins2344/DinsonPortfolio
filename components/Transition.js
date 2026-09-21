@@ -18,16 +18,17 @@ const panelVariants = {
 };
 
 // ponytail: tinted sheets, no backdrop-filter - three full-screen blurs in motion would drop frames
+// Soft light bands (feathered gradient, no hard edges) so the sweep reads as a glow, not a slab.
 const sheets = [
-  { tint: "bg-white/25", delay: 0 },
-  { tint: "bg-white/15", delay: 0.12 },
-  { tint: "bg-white/[0.07]", delay: 0.24 },
+  { tint: "via-white/[0.14]", delay: 0 },
+  { tint: "via-white/[0.09]", delay: 0.1 },
+  { tint: "via-white/[0.05]", delay: 0.2 },
 ];
 
 const panels = [
-  { color: "bg-[#2e2257]", z: "z-30", delay: 0.7 },
-  { color: "bg-[#3b2d71]", z: "z-20", delay: 0.85 },
-  { color: "bg-[#4b3792]", z: "z-10", delay: 1.0 },
+  { color: "bg-[#2e2257]", z: "z-30", delay: 0.6 },
+  { color: "bg-[#3b2d71]", z: "z-20", delay: 0.75 },
+  { color: "bg-[#4b3792]", z: "z-10", delay: 0.9 },
 ];
 
 const Transition = () => {
@@ -36,12 +37,12 @@ const Transition = () => {
       {sheets.map(({ tint, delay }) => (
         <motion.div
           key={tint}
-          className={`fixed inset-0 w-screen h-screen z-40 ${tint} border-r border-white/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] will-change-transform`}
+          className={`fixed inset-0 w-screen h-screen z-40 bg-gradient-to-r from-transparent ${tint} to-transparent will-change-transform`}
           variants={sheetVariants}
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ delay, duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ delay, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         />
       ))}
       {panels.map(({ color, z, delay }) => (
