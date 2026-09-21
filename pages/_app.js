@@ -11,7 +11,7 @@ import Transition from "../components/Transition";
 import { useRouter } from "next/router";
 
 //framer motion
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -20,14 +20,16 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/favicon-color.webp" />
       </Head>
-      <Layout>
-        <AnimatePresence>
-          <motion.div key={router.route} className="h-full">
-            <Transition />
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-      </Layout>
+      <MotionConfig reducedMotion="user">
+        <Layout>
+          <AnimatePresence>
+            <motion.div key={router.route} className="h-full">
+              <Transition />
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+        </Layout>
+      </MotionConfig>
     </>
   );
 }

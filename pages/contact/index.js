@@ -81,7 +81,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+              className="btn glass glass-pill max-w-[170px] px-8 transition-[border-color,transform] duration-300 flex items-center justify-center overflow-hidden hover:border-white/50 active:scale-95 disabled:opacity-60 group">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 {loading ? "Sending..." : "Send"}
               </span>

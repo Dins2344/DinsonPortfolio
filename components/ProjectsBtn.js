@@ -10,9 +10,9 @@ import { HiArrowRight } from 'react-icons/hi2';
 const ProjectsBtn = () => {
   return (
     
-    <div className='mx-auto xl:mx-0 z-40'>
+    <div className='mx-auto xl:mx-0 pointer-events-auto'>
       <Link href={'/work'}
-      className='relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group'>
+      className='glass glass-pill w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group hover:scale-105 transition-transform duration-300'>
         <Image src={'/rounded-text.png'}
           width={141}
           height={148}

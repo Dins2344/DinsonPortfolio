@@ -83,7 +83,6 @@ export const aboutData = [
 ];
 
 //components
-import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
 //motion
@@ -96,16 +95,6 @@ const About = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
-      {/* avatarImage */}
-      <motion.div
-        variants={fadeIn("right", 0.8)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[100px] max-w-[400px]"
-      >
-        <Avatar />
-      </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* shortStory */}
         <div className="flex-1 flex flex-col justify-center">
@@ -141,7 +130,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={2} duration={9} />+
+                  <CountUp start={0} end={2} duration={2.5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -150,7 +139,7 @@ const About = () => {
               {/* clients */}
               {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={9} />+
+                  <CountUp start={0} end={10} duration={2.5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
@@ -159,7 +148,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={9} />+
+                  <CountUp start={0} end={5} duration={2.5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
@@ -177,18 +166,24 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[350px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-2 xl:gap-x-4 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
-                <div
+                <button
+                  type="button"
                   key={itemIndex}
-                  className={`${index === itemIndex &&
-                    "text-accent after:w-full after:bg-red-600 after:transition-all after:duration-300"
-                    } hover:text-accent cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  className={`${index === itemIndex ? "text-accent" : "text-white/70"} relative isolate px-4 py-1.5 rounded-full hover:text-accent capitalize xl:text-lg transition-colors duration-300`}
                   onClick={() => setIndex(itemIndex)}
                 >
+                  {index === itemIndex && (
+                    <motion.span
+                      layoutId="about-tab"
+                      className="glass-sm glass-pill absolute inset-0 -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                    />
+                  )}
                   {item.title}
-                </div>
+                </button>
               );
             })}
           </div>

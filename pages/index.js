@@ -1,8 +1,6 @@
-//next Image
-import Image from "next/image";
 
 //components
-import ParticlesContainer from '../components/ParticlesContainer'
+import dynamic from 'next/dynamic'
 import ProjectionBtn from '../components/ProjectsBtn'
 import Avatar from '../components/Avatar'
 
@@ -12,13 +10,16 @@ import { motion } from "framer-motion";
 //fade in variants
 import { fadeIn } from '../variants'
 
+// particles are client-only and heavy; keep them off the SSR/hydration path
+const ParticlesContainer = dynamic(() => import('../components/ParticlesContainer'), { ssr: false })
+
 
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
       {/* text div */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="relative z-10 pointer-events-none text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
@@ -57,22 +58,24 @@ const Home = () => {
         </div>
       </div>
 
+      {/* particles: absolute against .page, so they cover the whole viewport */}
+      <ParticlesContainer />
+
       {/* image section */}
 
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+      {/* pointer-events-none so hover repulse still reaches the particles underneath */}
+      <div className="absolute inset-0 pointer-events-none">
         {/* background */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
+        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat absolute inset-0 mix-blend-color-dodge translate-z-0">
         </div>
-        {/* particles */}
-        <ParticlesContainer/>
-        {/* avatar */}
+        {/* avatar: backdrop on the mobile nav bar (80px) below xl, beside the text from xl up */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{duration:1,ease:'easeInOut'}}
-          className="w-full h-full max-w-[700px] max-h-[600px] absolute bottom-32 lg:bottom-0 lg:right-[7%]"
+          className="absolute inset-x-0 bottom-20 xl:bottom-0 h-[50vh] xl:h-[85vh] flex justify-end xl:pr-[7%]"
         >
           <Avatar />
         </motion.div>
