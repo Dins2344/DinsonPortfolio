@@ -50,7 +50,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className="w-full h-full absolute translate-z-0"
+      className="absolute inset-0 w-full h-full translate-z-0"
       id="tsParticles"
       init={particlesInit}
       options={options}
