@@ -1,8 +1,6 @@
-//next Image
-import Image from "next/image";
 
 //components
-import ParticlesContainer from '../components/ParticlesContainer'
+import dynamic from 'next/dynamic'
 import ProjectionBtn from '../components/ProjectsBtn'
 import Avatar from '../components/Avatar'
 
@@ -11,6 +9,9 @@ import { motion } from "framer-motion";
 
 //fade in variants
 import { fadeIn } from '../variants'
+
+// particles are client-only and heavy; keep them off the SSR/hydration path
+const ParticlesContainer = dynamic(() => import('../components/ParticlesContainer'), { ssr: false })
 
 
 const Home = () => {
@@ -74,7 +75,7 @@ const Home = () => {
           transition={{duration:1,ease:'easeInOut'}}
           className="w-full h-full max-w-[700px] max-h-[600px] absolute bottom-32 lg:bottom-0 lg:right-[7%]"
         >
-          <Avatar />
+          <Avatar priority />
         </motion.div>
       </div>
     </div>

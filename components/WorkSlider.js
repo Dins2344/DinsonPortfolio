@@ -5,18 +5,18 @@ const workSlides = {
       images: [
         {
           title1: 'EVENT',
-          path: '/pro1.jpg',
+          path: '/pro1.webp',
           title2: 'ZONE',
         },
         {
           title1: 'CHRISTMAS',
           title2: 'BOUTIQUE',
-          path: '/pro2.jpg',
+          path: '/pro2.webp',
         },
         {
           title1: 'DEEM',
           title2: '',
-          path: '/pro3.jpg',
+          path: '/pro3.webp',
         },
         // {
         //   title: 'title',
@@ -54,7 +54,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // icons
