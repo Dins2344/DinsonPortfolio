@@ -61,7 +61,7 @@ Do not introduce new colours inline — add them to `theme.extend.colors` first.
 - **Active-state morphing** (nav, tabs): a `motion.span layoutId="…"` rendered only under the active item, `transition={{ type: "spring", stiffness: 380, damping: 32 }}`. Reuse this pattern for any new segmented control; never animate an underline width.
 - Hover/UI feedback: Tailwind `transition-[transform,border-color] duration-300`. Name the properties; avoid `transition-all` on glass elements. Keep hover durations ≤ 300ms.
 - Reduced motion: `MotionConfig reducedMotion="user"` in `_app.js` covers Framer; CSS keyframes must be applied with `motion-safe:`.
-- Page transition (`Transition.js`) is three translate-only wipe panels. Keep it under ~1s total.
+- Page transition (`Transition.js`): three translucent sheets sweep right, then three opaque panels wipe left. Translate-only, no backdrop-filter on them, ~1.5s total. Change timings in the `sheets` / `panels` arrays only.
 - Particles: `loadSlim`, `fpsLimit: 60`, no `collisions`. Client-only (`next/dynamic`, `ssr: false`) and only on the home page.
 
 ## Performance rules
