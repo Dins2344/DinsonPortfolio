@@ -6,18 +6,23 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
-  FaAngular,
   FaNodeJs,
+  FaAws,
+  FaDocker,
+  FaGitAlt,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiNestjs,
+  SiGraphql,
   SiMongodb,
+  SiPostgresql,
+  SiRedis,
 } from "react-icons/si";
 
 //  data
@@ -26,42 +31,49 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
+        title: "Frontend",
         icons: [
-          <FaHtml5 key={""} />,
-          <FaCss3 key={""} />,
-          <FaJs key={""} />,
-          <FaReact key={""} />,
-          <SiNextdotjs key={""} />,
-          <FaAngular key={""} />,
-          <FaNodeJs key={""} />,
-          <SiMongodb key={''} />
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <SiTypescript key="ts" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="next" />,
+          <SiTailwindcss key="tailwind" />,
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "Backend",
         icons: [
-          <FaFigma key={""} />,
-          <SiAdobephotoshop key={""} />,
+          <FaNodeJs key="node" />,
+          <SiExpress key="express" />,
+          <SiNestjs key="nest" />,
+          <SiGraphql key="graphql" />,
+          <SiMongodb key="mongo" />,
+          <SiPostgresql key="postgres" />,
+          <SiRedis key="redis" />,
+        ],
+      },
+      {
+        title: "DevOps & Tools",
+        icons: [
+          <FaAws key="aws" />,
+          <FaDocker key="docker" />,
+          <FaGitAlt key="git" />,
+          <FaFigma key="figma" />,
         ],
       },
     ],
   },
-  // {
-  //   title: "awards",
-  //   info: [
-  //     {
-  //       title: "Webby Awards - Honoree",
-  //       stage: "2023",
-  //     },
-  //   ],
-  // },
   {
     title: "experience",
     info: [
-
       {
-        title: "SDE 1- Neutrinos, Bangalore, India",
+        title: "Freelance Full-Stack Developer - Self-employed",
+        stage: "2026(Jan) - Present",
+      },
+      {
+        title: "SDE 1 - Neutrinos, Bangalore, India",
         stage: "2023(Dec) - 2025(Dec)",
       },
     ],
@@ -70,14 +82,17 @@ export const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - Brototype, Kochi, Kerala",
-        stage: "2023",
+        title: "Bachelor of Computer Applications - Manipal University",
+        stage: "Expected 2029",
       },
       {
-        title: "Automobile Engineering Diploma - SITS, Valliyode, Palakkad",
-        stage: "2018",
+        title: "MERN Stack Development - Brototype, Kochi, Kerala",
+        stage: "2022 - 2023",
       },
-
+      {
+        title: "Diploma in Automobile Engineering - St. Mary's ITS, Palakkad",
+        stage: "2015 - 2018",
+      },
     ],
   },
 ];

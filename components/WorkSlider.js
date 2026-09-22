@@ -4,6 +4,12 @@ const workSlides = {
     {
       images: [
         {
+          title1: 'GARAGE',
+          title2: 'PULSE',
+          path: '/pro4.webp',
+          link: 'https://dctech.space/home',
+        },
+        {
           title1: 'EVENT',
           path: '/pro1.webp',
           title2: 'ZONE',
@@ -18,10 +24,6 @@ const workSlides = {
           title2: '',
           path: '/pro3.webp',
         },
-        // {
-        //   title: 'title',
-        //   path: '/thumb4.jpg',
-        // },
       ],
     },
     // {
@@ -77,22 +79,25 @@ const WorkSlider = () => {
             <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
               {item.images.map((image, i) => {
                 return (
-                  <div
+                  <a
                     key={i}
+                    href={image.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                   >
-                    <div className="flex items-center justify-center relative overflow-hidden group rounded-lg">
+                    <div className="w-full aspect-video flex items-center justify-center relative overflow-hidden group rounded-lg">
                       {/* images  */}
                       <Image
                         src={image.path}
                         alt="work image"
                         width={500}
                         height={300}
-                        className="group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       ></Image>
                       {/* tittle */}
                       <div className='glass-sm rounded-none border-x-0 border-b-0 absolute inset-x-0 bottom-0 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300'>
-                        <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
+                        <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] text-accent'>
                           {/* tittle part 1 */}
                           <div className='delay-100'>{image.title1}</div>
 
@@ -106,7 +111,7 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 );
               })}
            </div>
