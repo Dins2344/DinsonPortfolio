@@ -10,9 +10,10 @@ const workSlides = {
           link: 'https://dctech.space/home',
         },
         {
-          title1: 'EVENT',
-          path: '/pro1.webp',
-          title2: 'ZONE',
+          title1: 'MY',
+          title2: 'GARAGE',
+          path: '/pro5.webp',
+          link: 'https://play.google.com/store/apps/details?id=com.dctechs.mygarage',
         },
         {
           title1: 'CHRISTMAS',
